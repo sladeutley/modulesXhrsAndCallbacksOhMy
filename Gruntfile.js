@@ -28,7 +28,7 @@ module.exports = function(grunt){
             }
         },
         browserify: {
-            'dist/bundle.js': ['javascripts/main.js']
+            'dist/bundle.js': ['javascripts/module-xhr.js']
         },
      options: {
        transform: ['hbsfy'],
