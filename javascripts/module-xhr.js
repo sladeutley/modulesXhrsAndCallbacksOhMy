@@ -1,11 +1,13 @@
 "use strict";
 
-const animal = require("./animal");
+// In the module-xhr.js file, define two functions that will be executed after each type of animal is loaded that display those animals in your DOM. (Example given below)
 
-function showCarnivores(carnivores) {
-  // code that takes the carnovores array and displays it to the DOM
-}
+// const animal = require("./animal");
 
-function showHerbivores() {}
+// function showCarnivores(carnivores) {
+//   // code that takes the carnovores array and displays it to the DOM
+// }
 
-animal.loadCarnivores(showCarnivores);
+// function showHerbivores() {}
+
+// animal.loadCarnivores(showCarnivores);
