@@ -10,14 +10,14 @@ let herbivores = [];    // Set the value of the private array
 module.exports.loadCarnivores = (callbackToInvoke) => {
     const loader = new XMLHttpRequest(); //create request
     loader.addEventListener("load", function() { //setup event listeners for completed request
-    carnivores = JSON.parse(this.responseText); //turn out json string into a JS object
-    
-    // Now exeute the callback function (`callbackToInvoke`) so that the caller knows that the process is complete. Make sure to pass the carnivore array as an argument.
-    callbackToInvoke();
-    console.log(carnivores);
+        carnivores = JSON.parse(this.responseText); //turn out json string into a JS object
+        
+        // Now exeute the callback function (`callbackToInvoke`) so that the caller knows that the process is complete. Make sure to pass the carnivore array as an argument.
+        callbackToInvoke(carnivores);
+        console.log(carnivores);
     });
-loader.open("GET", "data/carnivores.json");
-loader.send();
+    loader.open("GET", "data/carnivores.json"); //tell it to get json file
+    loader.send(); //act of getting it
 };
 
 console.log('carnivores', carnivores);
